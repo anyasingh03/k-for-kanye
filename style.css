@@ -1,0 +1,18 @@
+* {
+    font-family: 'Verdana', sans-serif;
+    background-color: rgb(255, 234, 169);
+}
+
+.body {
+    font-family: 'Verdana', sans-serif;
+}
+
+img {
+    height: 100px;
+    width: 150px;
+}
+
+header {
+    background-color: rgb(106, 75, 40);
+    display: flex;
+}
