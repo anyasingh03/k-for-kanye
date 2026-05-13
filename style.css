@@ -1,6 +1,6 @@
 * {
     font-family: 'Verdana', sans-serif;
-    background-color: rgb(255, 234, 169);
+    margin: 0 auto;
 }
 
 .body {
@@ -13,6 +13,18 @@ img {
 }
 
 header {
-    background-color: rgb(106, 75, 40);
     display: flex;
+    text-align: center;
+    background-color: #99582A;
+    padding: 20px;
+    margin: 20px;
+}
+
+#favorites-heart {
+    font-size: x-large;
+    justify-content: flex-end;
+}
+
+button {
+    font-size: large;
 }
