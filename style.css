@@ -1,10 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
 * {
-    font-family: 'Verdana', sans-serif;
+    font-family: 'Outfit', sans-serif;
     margin: 20 auto;
+    box-sizing: border-box;
 }
 
 .body {
-    font-family: 'Verdana', sans-serif;
+    font-family: 'Outfit', sans-serif;
+
 }
 
 img {
@@ -24,8 +28,45 @@ header {
 #favorites-heart {
     font-size: x-large;
     margin-left: auto;
+    text-decoration: none;
 }
 
 button {
     font-size: large;
+    padding: 5px;
+    /* width: 10%;
+    height: 15%; */
+    align-self: center;
+}
+
+#favorites {
+    text-align: center;
+}
+
+.hero {
+    padding: 30px;
+    margin: 50px 20px 30px 40px;
+}
+
+.container {
+    padding: 10px;
+    margin: 0px 0px 0 0;
+    display: flex;
+    background-color: #c3e8e5;
+}
+
+.quote-box {
+    margin-left: auto;
+    background-color: #4c1a57;
+    width: 50%;
+    height: 500px;
+    padding: 20px;
+}
+
+.quote {
+    padding: 20px;
+    margin: 20px;
+    border-radius: 12px;
+    background-color: #CB769E;
+    height: 390px;
 }
