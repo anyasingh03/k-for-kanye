@@ -61,6 +61,7 @@ button {
     width: 50%;
     height: 500px;
     padding: 20px;
+    border-radius: 12px;
 }
 
 .quote {
@@ -69,4 +70,9 @@ button {
     border-radius: 12px;
     background-color: #CB769E;
     height: 390px;
+}
+
+#home a{
+    text-decoration: none;
+    color: black;
 }
