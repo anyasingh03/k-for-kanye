@@ -52,12 +52,12 @@ button {
     padding: 10px;
     margin: 0px 0px 0 0;
     display: flex;
-    background-color: #c3e8e5;
+    background-color: #b69e8b;
 }
 
 .quote-box {
     margin-left: auto;
-    background-color: #4c1a57;
+    background-color: #8f7656;
     width: 50%;
     height: 500px;
     padding: 20px;
@@ -68,7 +68,7 @@ button {
     padding: 20px;
     margin: 20px;
     border-radius: 12px;
-    background-color: #CB769E;
+    background-color: #644d3f;
     height: 390px;
 }
 
