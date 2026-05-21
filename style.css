@@ -8,7 +8,6 @@
 
 .body {
     font-family: 'Outfit', sans-serif;
-
 }
 
 img {
@@ -52,12 +51,12 @@ button {
     padding: 10px;
     margin: 0px 0px 0 0;
     display: flex;
-    background-color: #b69e8b;
+    background-color: #b99578;
 }
 
 .quote-box {
     margin-left: auto;
-    background-color: #8f7656;
+    background-color: #8f674e;
     width: 50%;
     height: 500px;
     padding: 20px;
@@ -68,11 +67,12 @@ button {
     padding: 20px;
     margin: 20px;
     border-radius: 12px;
-    background-color: #644d3f;
+    background-color: #785139;
     height: 390px;
+    text-align: center;
+    font-size: 30px;
 }
 
-#home a{
-    text-decoration: none;
-    color: black;
+.quote p {
+    font-size: large;
 }
