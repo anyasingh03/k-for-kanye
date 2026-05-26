@@ -28,6 +28,13 @@ header {
     font-size: x-large;
     margin-left: auto;
     text-decoration: none;
+    transform: hover transform box-shadow ease;
+}
+
+#favorites:hover {
+    transform: scale(1.2) translateY(-3px);
+    box-shadow: 3px rgba(32, 19, 11, 0.5);
+    
 }
 
 button {
@@ -35,7 +42,14 @@ button {
     padding: 5px;
     /* width: 10%;
     height: 15%; */
-    align-self: center;
+    align-self: center;    
+    transform: hover transform box-shadow ease;
+}
+
+button:hover {
+    transform: scale(1.2) translateY(-3px);
+    box-shadow: 3px rgba(32, 19, 11, 0.5);
+    
 }
 
 #favorites {
