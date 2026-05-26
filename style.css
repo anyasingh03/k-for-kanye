@@ -85,8 +85,23 @@ button:hover {
     height: 390px;
     text-align: center;
     font-size: 30px;
+    font: bold;
 }
 
 .quote p {
     font-size: large;
+    font: bold;
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+}
+
+#quote-element {
+    justify-content: center;
+    align-items: center;
+    
+    text-align: center;
+    font-weight: bold;
+
+    height: 100%;
 }
