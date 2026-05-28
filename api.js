@@ -8,14 +8,35 @@ const fetchQuote = async () => {
 
     const data = await response.json()
 
+
+    let cleanQuote = false
+
+    const quote = data.quote.toLowerCase()
+
+    const containsBadWord = quote.include(bannedWords.toLowerCase().trim())
+
+    if (!containsBadWord) {
+        quoteEl.textContent = `"${data.quote}"`
+        cleanQuote = true
+        console.log("No bad words cuaght.")
+    } else {
+        quoteEl.textContent = "Censored. Please try again."
+        console.log("Bad word caught.")
+    }
+    
     quoteEl.textContent = `"${data.quote}"`
 }
 
 quoteBtn.addEventListener("click", fetchQuote)
 
-for (let i = 0; i< quotes.json.length; i++){
-    let isSaved = false
-}
-
 const saveIcon = document.querySelector("#favorites-heart")
+
+
+
+
+//  catch (error) {
+//         quoteEl.textContent = "Please try again."
+//         console.error(error)
+//     }
+// }
 
