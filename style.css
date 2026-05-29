@@ -34,7 +34,7 @@ header {
 #favorites:hover {
     transform: scale(1.2) translateY(-3px);
     box-shadow: 3px rgba(32, 19, 11, 0.5);
-    
+
 }
 
 button {
@@ -42,17 +42,18 @@ button {
     padding: 5px;
     /* width: 10%;
     height: 15%; */
-    align-self: center;    
-    transform: hover transform box-shadow ease;
+    align-self: center;
+    transform: hover transform ease-in-out;
+    border-radius: 8px;
+    background-color: #4e3a30;
+    color: rgb(255, 231, 215);
 }
 
 button:hover {
     transform: scale(1.2) translateY(-3px);
-    box-shadow: 3px rgba(32, 19, 11, 0.5);
-    
 }
 
-#favorites {
+#favorites-title {
     text-align: center;
 }
 
@@ -99,9 +100,20 @@ button:hover {
 #quote-element {
     justify-content: center;
     align-items: center;
-    
+
     text-align: center;
     font-weight: bold;
 
     height: 100%;
+}
+
+#favorites {
+    background-color: #896654;
+    list-style-type: none;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    font-size: large;
+    font: bold;
+    box-shadow: inset;
 }
