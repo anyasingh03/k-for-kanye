@@ -1,42 +1,55 @@
 const quoteBtn = document.querySelector(".generator")
 const quoteEl = document.querySelector("#quote-element")
 
+const bannedWords = [
+    "sex",
+    "porn",
+    "kill",
+    "drugs",
+    "shit",
+    "fuck"
+]
+
+const isClean = (text) => {
+    const lower = text.toLowerCase()
+
+    return !bannedWords.some(word =>
+        lower.includes(word.toLowerCase())
+    )
+}
+
 const fetchQuote = async () => {
-    const response = await fetch("https://api.kanye.rest", {
-        headers: { Accept: "application/json" }
-    })
+    try {
 
-    const data = await response.json()
+        let cleanQuote = false
 
+        while (!cleanQuote) {
 
-    let cleanQuote = false
+            const response = await fetch("https://api.kanye.rest/")
 
-    const quote = data.quote.toLowerCase()
+            const data = await response.json()
 
-    const containsBadWord = quote.include(bannedWords.toLowerCase().trim())
+            const quote = data.quote.toLowerCase()
 
-    if (!containsBadWord) {
-        quoteEl.textContent = `"${data.quote}"`
-        cleanQuote = true
-        console.log("No bad words cuaght.")
-    } else {
-        quoteEl.textContent = "Censored. Please try again."
-        console.log("Bad word caught.")
+            const containsBadWord = bannedWords.some(word =>
+                quote.includes(word)
+            )
+
+            if (!containsBadWord) {
+                quoteEl.textContent = `"${data.quote}"`
+                cleanQuote = true
+                console.log("clean quote found")
+            }
+
+            else {
+                console.log("found bad word ‼️")
+            }
+
+        }
+    } catch (error) {
+        quoteEl.textContent = "Please try again later."
+        console.error(error)
     }
-    
-    quoteEl.textContent = `"${data.quote}"`
 }
 
 quoteBtn.addEventListener("click", fetchQuote)
-
-const saveIcon = document.querySelector("#favorites-heart")
-
-
-
-
-//  catch (error) {
-//         quoteEl.textContent = "Please try again."
-//         console.error(error)
-//     }
-// }
-
