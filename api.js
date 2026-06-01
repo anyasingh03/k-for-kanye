@@ -60,16 +60,15 @@ quoteBtn.addEventListener("click", fetchQuote)
 
 // save quotes
 
-let savedQuotes = []
+// let savedQuotes = []
 
 function saveQuote() {
-    saveBtn.addEventListener("click")
     localStorage.setItem('savedQuote', JSON.stringify(quoteEl))
     console.log("clicked the button and it saved to storage")
 }
+saveBtn.addEventListener("click", saveQuote)
 
 function createFavorite(quote){
-    saveBtn.addEventListener("click", saveQuote)
     console.log("saved!")
     const item = document.createElement("li")
     item.innerText = `"${quoteEl}"`
@@ -77,9 +76,9 @@ function createFavorite(quote){
     
 }
 
-for (quote of quotes){
-    savedList.appendChild(createFavorite(quote))
-    console.log("created a favorite!")
-}
+// for (quote of quotes){
+//     savedList.appendChild(createFavorite(quote))
+//     console.log("created a favorite!")
+// }
 // return item
 
