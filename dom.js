@@ -25,7 +25,8 @@ if (saveBtn) {
             localStorage.setItem("savedQuotes", JSON.stringify(saved))
             console.log("Quote saved!")
         } else {
-            alert("This quote is already saved!")
+            const alertContainer = document.querySelector(".feedback")
+            alertContainer.textContent = 'Saved already! Please generate a new quote!'
         }
     })
 }
@@ -34,7 +35,7 @@ if (saveBtn) {
 const favoritesList = document.querySelector("#favorites")
 
 if (favoritesList) {
-    const saved = JSON.parse(localStorage.getItem("savedQuotes") || "[]")
+    let saved = JSON.parse(localStorage.getItem("savedQuotes") || "[]")
 
     if (saved.length === 0) {
         favoritesList.textContent = "No saved quotes!"
@@ -46,4 +47,14 @@ if (favoritesList) {
             favoritesList.appendChild(item)
         })
     }
+}
+
+const clearAllBtn = document.querySelector(".clear-all-btn")
+
+if (clearAllBtn) {
+    clearAllBtn.addEventListener('click', () => {
+        localStorage.removeItem("savedQuotes")
+        favoritesList.textContent = "No saved quotes!"
+        console.log("Cleared all saved quotes!")
+    })
 }

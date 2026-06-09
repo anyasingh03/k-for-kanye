@@ -6,8 +6,9 @@
     box-sizing: border-box;
 }
 
-.body {
+body {
     font-family: 'Outfit', sans-serif;
+    background-color: #b99578;
 }
 
 img {
@@ -29,12 +30,6 @@ header {
     margin-left: auto;
     text-decoration: none;
     transform: hover transform box-shadow ease;
-}
-
-#favorites:hover {
-    transform: scale(1.2) translateY(-3px);
-    box-shadow: 3px rgba(32, 19, 11, 0.5);
-
 }
 
 button {
@@ -108,12 +103,17 @@ button:hover {
 }
 
 #favorites {
+    list-style: none;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#favorites li {
     background-color: #896654;
-    list-style-type: none;
+    padding: 16px 20px;
     border-radius: 8px;
-    padding: 10px;
     text-align: center;
-    font-size: large;
-    font: bold;
-    box-shadow: inset;
+    font-size: 1rem;
 }
