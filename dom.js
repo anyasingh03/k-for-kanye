@@ -24,6 +24,7 @@ if (saveBtn) {
             saved.push(quoteText)
             localStorage.setItem("savedQuotes", JSON.stringify(saved))
             console.log("Quote saved!")
+            alertContainer.textContent = ""
         } else {
             const alertContainer = document.querySelector(".feedback")
             alertContainer.textContent = 'Saved already! Please generate a new quote!'
@@ -55,6 +56,6 @@ if (clearAllBtn) {
     clearAllBtn.addEventListener('click', () => {
         localStorage.removeItem("savedQuotes")
         favoritesList.textContent = "No saved quotes!"
-        console.log("Cleared all saved quotes!")
+        console.log("cleared all saved quotes!")
     })
 }

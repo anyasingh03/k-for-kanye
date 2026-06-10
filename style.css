@@ -8,7 +8,7 @@
 
 body {
     font-family: 'Outfit', sans-serif;
-    background-color: #b99578;
+    background: linear-gradient(#6a3182, #c5756a);
 }
 
 img {
@@ -19,7 +19,7 @@ img {
 header {
     display: flex;
     text-align: center;
-    background-color: #99582A;
+    background-color: #ef2a45;
     padding: 10px;
     margin: 0 0 10px 0;
     align-items: center;
@@ -40,8 +40,8 @@ button {
     align-self: center;
     transform: hover transform ease-in-out;
     border-radius: 8px;
-    background-color: #4e3a30;
-    color: rgb(255, 231, 215);
+    background-color: #5b2d0c;
+    color: #d1dad9;
 }
 
 button:hover {
@@ -61,12 +61,12 @@ button:hover {
     padding: 10px;
     margin: 0px 0px 0 0;
     display: flex;
-    background-color: #b99578;
+    /* background-color: #b99578; */
 }
 
 .quote-box {
     margin-left: auto;
-    background-color: #8f674e;
+    background-color: #f58b58;
     width: 50%;
     height: 500px;
     padding: 20px;
